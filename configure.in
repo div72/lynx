@@ -42,6 +42,8 @@ rm -f config.cache
 
 AC_PREREQ(2.25.20210105)
 AC_INIT(userdefs.h)
+AC_CONFIG_AUX_DIR([build-aux])
+AC_CONFIG_MACRO_DIR([build-aux/m4])
 
 # autoconf 2.5x defaults to no cache file; we need the cache file's information
 # for building the config page.  But start with it empty to avoid confusion by
