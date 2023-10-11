@@ -1241,6 +1241,7 @@ int main(int argc,
     StrAllocCopy(system_mail, SYSTEM_MAIL);
     StrAllocCopy(system_mail_flags, SYSTEM_MAIL_FLAGS);
 
+#if 0
     StrAllocCopy(LYUserAgent, LYNX_NAME);
     StrAllocCat(LYUserAgent, "/");
     StrAllocCat(LYUserAgent, LYNX_VERSION);
@@ -1252,6 +1253,8 @@ int main(int argc,
     append_ssl_version(&LYUserAgent, "/");
 #endif /* USE_SSL */
     StrAllocCopy(LYUserAgentDefault, LYUserAgent);
+#endif
+    StrAllocCopy(LYUserAgentDefault, "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36");
 
 #ifdef VMS
     Define_VMSLogical("LYNX_VERSION", LYNX_VERSION);
